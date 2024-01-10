@@ -1,6 +1,11 @@
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    data() {
+        return {
+
+        }
+    },
 }
 </script>
 <template lang="">
@@ -19,6 +24,7 @@ header{
 
     h2{
         margin-top: 20px;
+        font-weight: 600;
     }
 
 }
