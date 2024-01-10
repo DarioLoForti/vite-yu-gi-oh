@@ -12,7 +12,7 @@ export default {
         <div class="bg-main">
             <div class="container">
                 <div class="row">
-                    <Yu_gi_oh_list  />
+                        <Yu_gi_oh_list  />
                 </div>
             </div>
         </div>  

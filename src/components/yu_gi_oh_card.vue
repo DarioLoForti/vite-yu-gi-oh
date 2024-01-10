@@ -24,9 +24,9 @@ export default {
 @use'../styles/generals.scss' as *;
 
 .my-cards-col {
-    width: calc(100% / 5 - 30px);
+    width: calc(100% / 5 - 40px);
     background-color: #D48F38;
-    margin: 30px;
+    margin: 20px;
 }
 
 .card-container {
@@ -45,7 +45,7 @@ export default {
 
     h4,
     h5 {
-        margin-top: 15px;
+        margin-top: 5px;
     }
 
     img {
