@@ -1,8 +1,8 @@
 <script>
 import axios from 'axios';
-import AppHeader from './components/AppHeader.vue'
-import AppMain from './components/AppMain.vue';
+import AppHeader from './components/AppHeader.vue';
 import loader from './components/loader.vue';
+import yu_gi_oh_list from './components/yu_gi_oh_list.vue';
 import { store } from './store.js';
 
 
@@ -10,7 +10,7 @@ export default {
 
   components: {
     AppHeader,
-    AppMain,
+    yu_gi_oh_list,
     loader,
   },
   data() {
@@ -35,7 +35,7 @@ export default {
     <loader v-if="store.loading" />
     <div v-else>
       <AppHeader />
-      <AppMain />
+      <yu_gi_oh_list />
     </div>
 </template>
 <style lang="scss" >
