@@ -21,6 +21,13 @@ export default {
     }
   },
   methods: {
+getarchetypes_list(){
+
+  axios.get(store.endpointarchetype).then((response) => {
+    store.archetypes = response.data
+  })
+},
+
     getyu_gi_oh_list() {
       // axios.get(store.endpoint).then((response) => {
       //   store.yu_gi_oh_list = response.data.data
@@ -34,13 +41,15 @@ export default {
 
       axios.get(apiarchetypes).then((response) => {
         store.loading = true;
-        store.yu_gi_oh_list = response.data.data
+        store.yu_gi_oh_list = response.data.data;
         store.loading = false;
       });
     }
   },
   created() {
     this.getyu_gi_oh_list();
+    this.getarchetypes_list();
+    
   }
 }
 </script>

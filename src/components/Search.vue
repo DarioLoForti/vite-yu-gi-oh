@@ -6,7 +6,7 @@ export default {
         return{
             store,
         }
-    }
+    },
 }
 </script>
 <template lang="">
@@ -14,7 +14,7 @@ export default {
         <div class="row">
             <div class="col-3">
                 <label for="filter" class="control-label">Archetypes</label>
-                <select id="filter" v-model="store.archetypes">
+                <select id="filter" v-model="store.archetype">
                     <option value="" selected> select archetypes</option>
                     <option v-for="archetype, index in store.archetypes" :key="index" :value="archetype.archetype_name">
                         {{ archetype.archetype_name }}
