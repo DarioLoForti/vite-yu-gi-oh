@@ -3,6 +3,7 @@ import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import loader from './components/loader.vue';
 import yu_gi_oh_list from './components/yu_gi_oh_list.vue';
+import Search from './components/Search.vue';
 import { store } from './store.js';
 
 
@@ -12,6 +13,7 @@ export default {
     AppHeader,
     yu_gi_oh_list,
     loader,
+    Search,
   },
   data() {
     return {
@@ -20,10 +22,21 @@ export default {
   },
   methods: {
     getyu_gi_oh_list() {
-      axios.get(store.endpoint).then((response) => {
+      // axios.get(store.endpoint).then((response) => {
+      //   store.yu_gi_oh_list = response.data.data
+      //   store.loading = false;
+
+      let apiarchetypes = store.endpoint;
+
+      if (store.archetype !== ""){
+        apiarchetypes += `?archetype=${store.archetypes}`
+      };
+
+      axios.get(apiarchetypes).then((response) => {
+        store.loading = true;
         store.yu_gi_oh_list = response.data.data
         store.loading = false;
-      })
+      });
     }
   },
   created() {
@@ -35,6 +48,7 @@ export default {
     <loader v-if="store.loading" />
     <div v-else>
       <AppHeader />
+      <Search @sendSearch ="getyu_gi_oh_list" />
       <yu_gi_oh_list />
     </div>
 </template>
