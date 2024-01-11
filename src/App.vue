@@ -35,8 +35,8 @@ getarchetypes_list(){
 
       let apiarchetypes = store.endpoint;
 
-      if (store.archetype !== ""){
-        apiarchetypes += `?archetype=${store.archetypes}`
+      if (store.archetype !== " ") {
+        apiarchetypes = `https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${store.archetype}&num=100&offset=0`
       };
 
       axios.get(apiarchetypes).then((response) => {
