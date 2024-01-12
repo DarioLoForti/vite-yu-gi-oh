@@ -4,6 +4,7 @@ import AppHeader from './components/AppHeader.vue';
 import loader from './components/loader.vue';
 import yu_gi_oh_list from './components/yu_gi_oh_list.vue';
 import Search from './components/Search.vue';
+import result from './components/result.vue';
 import { store } from './store.js';
 
 
@@ -14,6 +15,7 @@ export default {
     yu_gi_oh_list,
     loader,
     Search,
+    result,
   },
   data() {
     return {
@@ -58,6 +60,7 @@ getarchetypes_list(){
     <div v-else>
       <AppHeader />
       <Search @sendSearch ="getyu_gi_oh_list" />
+      <result />
       <yu_gi_oh_list />
     </div>
 </template>
