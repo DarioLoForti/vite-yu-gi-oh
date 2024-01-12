@@ -19,7 +19,7 @@ export default {
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h5 v-if="cardresult > 0"> Numero Carte : {{ cardresult }}</h5>
+                <h5 class="my-4" v-if="cardresult > 0"> Numero Carte : {{ cardresult }}</h5>
                 <h5 v-else > Nessuna Carta di questo archetipo</h5>       
             </div>
         </div>
@@ -27,6 +27,10 @@ export default {
     
 </template>
 <style lang="scss" scoped>
-@use '../styles/generals.scss'
+@use '../styles/generals.scss';
+
+h5{
+    font-weight: 600;
+}
     
 </style>

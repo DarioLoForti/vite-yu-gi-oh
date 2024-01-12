@@ -59,7 +59,7 @@ getarchetypes_list(){
     <loader v-if="store.loading" />
     <div v-else>
       <AppHeader />
-      <Search @sendSearch ="getyu_gi_oh_list" />
+      <Search @reset ="getyu_gi_oh_list" @sendSearch ="getyu_gi_oh_list" />
       <result />
       <yu_gi_oh_list />
     </div>
